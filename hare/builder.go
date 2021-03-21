@@ -91,7 +91,7 @@ type messageBuilder struct {
 func newMessageBuilder() *messageBuilder {
 	m := &messageBuilder{&Msg{&Message{}, nil}, &innerMessage{}}
 	m.msg.InnerMsg = m.inner
-
+	m.inner.EligibilityCount = 1
 	return m
 }
 

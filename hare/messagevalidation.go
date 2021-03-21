@@ -278,7 +278,9 @@ func (v *syntaxContextValidator) validateAggregatedMessage(aggMsg *aggregatedMes
 
 	var count int
 	for _, m := range aggMsg.Messages {
-		count += int(m.InnerMsg.EligibilityCount)
+		if m != nil && m.InnerMsg != nil {
+			count += int(m.InnerMsg.EligibilityCount)
+		}
 	}
 
 	if count < v.threshold { // must fit eligibility threshold
