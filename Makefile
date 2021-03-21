@@ -8,7 +8,7 @@ BIN_DIR = $(CURR_DIR)/build
 BIN_DIR_WIN = $(CURR_DIR_WIN)/build
 export GO111MODULE = on
 
-DOCKER_HUB=sudachen
+DOCKER_HUB=spacemeshos
 
 # These commands cause problems on Windows
 ifeq ($(OS),Windows_NT)
